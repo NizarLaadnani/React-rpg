@@ -1,25 +1,19 @@
 #root {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-family: sans-serif;
+  @apply max-w-xl mx-auto p-8 font-sans;
 }
 
 .form label {
-  display: block;
-  margin-top: 0.5rem;
+  @apply block mt-2;
 }
 
 .list li {
-  cursor: pointer;
-  margin: 0.2rem 0;
+  @apply cursor-pointer my-1;
 }
 
 .battle select {
-  margin-right: 0.5rem;
+  @apply mr-2;
 }
 
 .log {
-  text-align: left;
-  margin-top: 1rem;
+  @apply text-left mt-4;
 }

@@ -54,9 +54,13 @@ export default function Battle({ characters }) {
   }
 
   return (
-    <div className="battle">
-      <h2>Combat</h2>
-      <select value={a} onChange={(e) => setA(e.target.value)}>
+    <div className="battle mt-4 rounded-lg bg-gray-800 p-4">
+      <h2 className="mb-2 text-lg font-semibold">Combat</h2>
+      <select
+        className="mr-2 rounded border border-gray-300 p-2 text-black"
+        value={a}
+        onChange={(e) => setA(e.target.value)}
+      >
         <option value="">Personnage 1</option>
         {characters.map((c) => (
           <option key={c.id} value={c.id}>
@@ -64,7 +68,11 @@ export default function Battle({ characters }) {
           </option>
         ))}
       </select>
-      <select value={b} onChange={(e) => setB(e.target.value)}>
+      <select
+        className="mr-2 rounded border border-gray-300 p-2 text-black"
+        value={b}
+        onChange={(e) => setB(e.target.value)}
+      >
         <option value="">Personnage 2</option>
         {characters.map((c) => (
           <option key={c.id} value={c.id}>
@@ -72,9 +80,14 @@ export default function Battle({ characters }) {
           </option>
         ))}
       </select>
-      <button onClick={startBattle}>Lancer</button>
+      <button
+        className="rounded bg-red-600 px-4 py-2 font-medium text-white"
+        onClick={startBattle}
+      >
+        Lancer
+      </button>
       {log.length > 0 && (
-        <ul className="log">
+        <ul className="log mt-4 list-disc pl-4 text-left">
           {log.map((l, i) => (
             <li key={i}>{l}</li>
           ))}
