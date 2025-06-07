@@ -1,19 +1,19 @@
-import { useState } from 'react'
-import CharacterForm from './components/CharacterForm.jsx'
-import CharacterList from './components/CharacterList.jsx'
-import CharacterDetails from './components/CharacterDetails.jsx'
-import Battle from './components/Battle.jsx'
-import './App.css'
+import { useState } from "react";
+import CharacterForm from "./components/CharacterForm.jsx";
+import CharacterList from "./components/CharacterList.jsx";
+import CharacterDetails from "./components/CharacterDetails.jsx";
+import Battle from "./components/Battle.jsx";
+import "./App.css";
 
 function App() {
-  const [characters, setCharacters] = useState([])
-  const [selectedId, setSelectedId] = useState(null)
+  const [characters, setCharacters] = useState([]);
+  const [selectedId, setSelectedId] = useState(null);
 
   function addCharacter(char) {
-    setCharacters((chars) => [...chars, char])
+    setCharacters((chars) => [...chars, char]);
   }
 
-  const selected = characters.find((c) => c.id === selectedId)
+  const selected = characters.find((c) => c.id === selectedId);
 
   return (
     <>
@@ -23,7 +23,7 @@ function App() {
       <CharacterDetails character={selected} />
       <Battle characters={characters} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
